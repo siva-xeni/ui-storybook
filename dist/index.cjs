@@ -35,14 +35,17 @@ var Button = ({
   ...props
 }) => {
   const mode = primary ? "storybook-button--primary" : "storybook-button--secondary";
-  return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
     "button",
     {
       type: "button",
       className: ["storybook-button", `storybook-button--${size}`, mode].join(" "),
       style: { backgroundColor },
       ...props,
-      children: label
+      children: [
+        label,
+        label
+      ]
     }
   );
 };
